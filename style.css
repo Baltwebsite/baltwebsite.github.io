@@ -1,0 +1,174 @@
+/*
+  Designer & forfatter: Thais Harlev Skarving Sass Balthazar  
+  Copyright Â© Balt. Alle rettigheder forbeholdes.
+*/
+
+/* -------------------------------------------------------------------------------
+  Farver: #202020 (Black), #F5F5F5 (White), #EADC5C (Soft Yellow)
+---------------------------------------------------------------------------------- */
+
+/* ---------------------------- FONT ---------------------------- */
+@font-face {
+    font-family: 'Mona Sans';
+    src:
+    url('https://balt.dk/font/Mona-Sans.woff') format('woff supports variations'),
+    url('https://balt.dk/font/Mona-Sans.woff') format('woff-variations');
+    font-weight: 1 1000;
+    font-stretch: 75% 300%;
+}
+
+/* ---------------------------- HTML / BODY ---------------------------- */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F5F5;
+    color: #202020;
+    text-align: center;
+    line-height: 1.5;
+    font-family: 'Mona Sans';
+    user-select: none;
+    overflow-x: hidden;
+}
+
+body > * {
+    position: relative;
+    margin: 0 auto;
+    max-width: 93.75rem;
+    padding: 3.75rem;
+}
+
+
+/* ---------------------------- HEADER ---------------------------- */
+.header {
+    padding-top: 250px;
+    padding-bottom: 250px;
+}
+
+.header h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #202020;
+    font-weight: 1;
+    font-stretch: 300%;
+    line-height: 1;
+}
+
+/* ---------------------------- FOOTER / KONTAKT ---------------------------- */
+#kontakt a,
+#kontakt p {
+    color: #202020;
+    font-size: 1rem;
+    font-weight: 500;
+    font-stretch: 125%;
+    line-height: 3rem;
+    text-decoration: none;
+}
+
+#kontakt a:hover {
+    opacity: 50%;
+    transition: 0.3s;
+}
+
+.left-footer {
+    text-align: left;
+    margin-left: 3.75rem;
+}
+
+.center-footer img {
+    height: 1.875rem;
+}
+
+.right-footer {
+    text-align: right;
+    margin-right: 3.75rem;
+}
+
+.right-footer-ig img,
+.right-footer-in img {
+    width: 1.875rem;
+}
+
+.right-footer-ig img {
+    margin-right: 3.75rem;
+}
+
+.responsive-three-column-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 3.75rem;
+}
+
+.responsive-three-column-grid > * {
+    padding: 1rem;
+}
+
+/* ---------------------------- MEDIA QUERIES (Mobilvenligt) ---------------------------- */
+@media (max-width: 768px) {
+/* ---------------------------- BODY ---------------------------- */
+    body > * {
+        padding: 1.5rem;
+        max-width: 100%;
+    }
+
+/* ---------------------------- HEADER ---------------------------- */
+.header {
+    padding-top: 350px;
+    padding-bottom: 400px;
+}
+
+.header h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #202020;
+    font-weight: 1;
+    font-stretch: 300%;
+    line-height: 1;
+}
+
+/* ---------------------------- FOOTER / KONTAKT ---------------------------- */
+    #kontakt a,
+    #kontakt p {
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+
+    .left-footer,
+    .center-footer,
+    .right-footer {
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .center-footer img,
+    .right-footer-ig img,
+    .right-footer-in img {
+        width: 1.5rem;
+        height: auto;
+    }
+
+    .responsive-three-column-grid {
+        display: block;
+        margin-top: 2rem;
+    }
+
+    .responsive-three-column-grid > * {
+        padding: 1rem 0;
+    }
+}
+
+/* ---------------------------- MEDIA QUERIES (Tablet) ---------------------------- */
+@media (min-width: 768px) {
+    .responsive-three-column-grid {
+        display: grid;
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
